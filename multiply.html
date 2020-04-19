@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+		function multiplyBy()
+		{
+				num1 = document.getElementById("firstNumber").value;
+				num2 = document.getElementById("secondNumber").value;
+				document.getElementById("result").innerHTML = num1 * num2;
+		}
+
+		function divideBy() 
+		{ 
+				num1 = document.getElementById("firstNumber").value;
+				num2 = document.getElementById("secondNumber").value;
+		document.getElementById("result").innerHTML = num1 / num2;
+		}
+	</script>
+
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="">Maths</a></li>
+				<li><a href="">Comp Sci</a></li>
+				<li><a href="">Economics</a></li>
+				<li><a href="">Business</a></li>
+				<li><a href="">Physics</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Multiply and Divide</h1>
+            <div class="row center">
+                <h5 class="header col s12 light"> A simple calculator to show how to make a calculator in javascript  </h5>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section hide-on-small-only">
+            <form> 
+				1st Number : <input type="text" id="firstNumber" /><br>
+				2nd Number: <input type="text" id="secondNumber" /><br>
+				<input type="button" onClick="multiplyBy()" Value="Multiply" />
+				<input type="button" onClick="divideBy()" Value="Divide" />
+			</form>
+			<p>The Result is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+			</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
