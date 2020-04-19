@@ -5,6 +5,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+})
+</script>
 
 </head>
 
@@ -12,12 +19,21 @@
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="">Maths</a></li>
-				<li><a href="">Comp Sci</a></li>
-				<li><a href="">Economics</a></li>
-				<li><a href="">Business</a></li>
-				<li><a href="">Physics</a></li>
+                <li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
             </ul>
+			
+			<ul id="nav-mobile" class="sidenav">
+                <li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+			</ul>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         </div>
     </nav>
