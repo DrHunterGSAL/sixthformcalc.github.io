@@ -5,6 +5,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+
+		function speed()
+		{
+				frequency = document.getElementById("frequency").value;
+				wavelength = document.getElementById("wavelength").value;
+				document.getElementById("result").innerHTML = frequency * wavelength;
+		}
+	</script>
 
 </head>
 
@@ -24,46 +33,27 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br><br>
-            <h1 class="header center orange-text">Physics</h1>
+            <h1 class="Wave Speed Equation">Wave Speed</h1>
             <div class="row center">
-                <h5 class="header col s12 light"> Find all the physics equations here </h5>
+                <h5 class="header col s12 light"> Calculate the Wave Speed </h5>
 
             </div>
         </div>
     </div>
-	
-	    <div class="container">
+    <div class="container">
         <div class="section hide-on-small-only">
+            <form> 
+				frequency: Hz<input type="text" id="frequency" /><br>
+				wavelength: m<input type="text" id="wavelength" /><br>
+				<input type="button" onClick="speed()" Value="Calculate the wave speed" />
+			</form>
+			<p>The Wave Speed is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+				m/s
+			</p>
         </div>
-		</div>
-	
-	</a>
-	<a href="KE_equation.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Kinetic Energy Equation </span>
-	</a>
-	</div>
-	
-	<a href="GPE_equation.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Gravitational Potential Energy Equation </span>
     </div>
-	</a>
-	
-	<a href="density_equation.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Density Equation </span>
-    </div>
-	</a>
 
-	<a href="wave_speed_equation.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Wave Speed Equation </span>
-    </div>
-	</a>
-	
-</div>
-	
 </body>
 
 </html>
