@@ -5,6 +5,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+
+		function period()
+		{
+				frequency = document.getElementById("frequency").value;
+				document.getElementById("result").innerHTML = 1/frequency;
+		}
+	</script>
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
 
 </head>
 
@@ -24,46 +37,26 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br><br>
-            <h1 class="header center orange-text">Physics</h1>
+            <h1 class="Time Period Equation">Time Period</h1>
             <div class="row center">
-                <h5 class="header col s12 light"> Find all the physics equations here </h5>
+                <h5 class="header col s12 light"> The equation for time period is \(\frac{1}{frequency}\) </h5>
 
             </div>
         </div>
     </div>
-	
-	    <div class="container">
+    <div class="container">
         <div class="section hide-on-small-only">
+            <form> 
+				frequency: Hz<input type="text" id="frequency" /><br>
+				<input type="button" onClick="period()" Value="Calculate time period" />
+			</form>
+			<p>The Time Period is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+				seconds
+			</p>
         </div>
-		</div>
-	
-	</a>
-	<a href="physics_waves.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Waves </span>
-	</a>
-	</div>
-	
-	<a href="physics_mechanics.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Mechanics </span>
     </div>
-	</a>
-	
-	<a href="physics_materials.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Materials </span>
-    </div>
-	</a>
 
-	<a href="wave_speed_equation.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">Wave Speed Equation </span>
-    </div>
-	</a>
-	
-</div>
-	
 </body>
 
 </html>
