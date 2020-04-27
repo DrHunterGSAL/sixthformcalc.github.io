@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+
+		function YM()
+		{
+				force = document.getElementById("force").value;
+				length = document.getElementById("length").value;
+				area = document.getElementById("area").value;
+				extension = document.getElementById("extension").value;
+				document.getElementById("result").innerHTML = (force*length)/(area*extension);
+		}
+	</script>
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+            </ul>
+			
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="YM equation">Young's Modulus</h1>
+            <div class="row center">
+                <h5 class="header col s12 light"> The equation for Young's Modulus is \(\frac{FL}{A \Delta L}\) </h5>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section hide-on-small-only">
+            <form> 
+				force: N<input type="text" id="force" /><br>
+				Original Length: m<input type="text" id="length" /><br>
+				Cross-sectional area: m^2<input type="text" id="area" /><br>
+				Extension: m<input type="text" id="extension" /><br>
+				<input type="button" onClick="YM()" Value="Calculate young's modulus" />
+			</form>
+			<p>The Young's Modulus is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+				pa
+			</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
