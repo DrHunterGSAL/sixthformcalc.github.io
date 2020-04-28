@@ -9,16 +9,29 @@
 
 </head>
 
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	var i;
+	var x = document.getElementsByClassName("mySlides");
+	if (n > x.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = x.length}
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+	}
+	x[slideIndex-1].style.display = "block";  
+}
+</script>
+
 <body>
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="maths.html">Maths</a></li>
-				<li><a href="cs.html">Comp Sci</a></li>
-				<li><a href="econ.html">Economics</a></li>
-				<li><a href="business.html">Business</a></li>
-				<li><a href="physics.html">Physics</a></li>
-            </ul>
 
         </div>
     </nav>
@@ -32,18 +45,24 @@
             </div>
         </div>
     </div>
+	
     <div class="container">
-        <div class="section hide-on-small-only">
-            <h1>Sixth Form Calculator is a collaboration project that allows users to quickly find the answers to numerical A-Level questions </h1>
-            <h2>The calculators are not ready yet, but will appear below soon!</h2>
-        </div>
-    
-	<a href="multiply.html">
-    <div class="card-panel">
-        <span class="blue-text text-darken-2">This is an example multiplication and division calculator </span>
-    </div>
-	</a>
-	</div>
+		
+		<a href="physics.html">
+		<img class="mySlides" src="physics.jpg" style="width:100%">
+		</a>
+		<a href="maths.html">
+		<img class="mySlides" src="maths.jpg" style="width:100%">
+		</a>
+		<a href="cs.html">
+		<img class="mySlides" src="computing.jpg" style="width:100%">
+		</a>
+		<a href="econ.html">
+		<img class="mySlides" src="economics.jpg" style="width:100%">
+		</a>
+		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </body>
 
+</html>
 </html>
