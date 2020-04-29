@@ -7,9 +7,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 	<script>
-		function differentiate(order)
+		function diffQuad()
 		{
-			var 
+			a = document.getElementById("a").value;
+			b = document.getElementById("b").value;
+
+			a = a * 2
+
+			document.getElementById("final_equation").innerHTML = "dy/dx = " + a + "x" + " + " + b;
+		}
+
+		function integQuad()
+		{
+			a = document.getElementById("a").value;
+			b = document.getElementById("b").value;
+			c = document.getElementById("c").value;
+
+			a = a / 3;
+			b = b / 2;
+
+			document.getElementById("final_equation").innerHTML = "∫ = " + a + "x³ + " + b + "x² + " + c + "x + c";
 		}
 	</script>
 
@@ -41,11 +58,19 @@
 	<div class="container">
 		<div class="section hide-on-small-only">
 			<form> 
-				Radius (m): <input type="text" id="radius" /><br>
-				<input type="button" onClick="area()" Value="Calculate" />
+				y = ax<sup>2</sup> + bx + c<br>
+				a: <input id="a" /><br>
+				b: <input id="b" /><br>
+				c: <input id="c" /><br>
+				<input type="button" onClick="diffQuad()" Value="Differentiate" />
+				<input type="button" onClick="integQuad()" Value="Integrate" />
 			</form>
-			<p>The area is : <br>
-				<span class="blue-text text-darken-2" id = "result"></span>
+
+			<form>
+				<p id="equation form"></p>
+			</form>
+			<p id="Final Statement"><br>
+				<span class="blue-text text-darken-2" id = "final_equation"></span>
 			</p>
 		</div>
 	</div>
