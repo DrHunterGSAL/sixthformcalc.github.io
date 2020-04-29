@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+		function share_calculation() 
+		{ 
+			num1 = document.getElementById("Original").value;
+			num2 = document.getElementById("NumberOf").value;
+			ans1 = num1 * num2;
+			
+			num3 = document.getElementById("Current").value;
+			num4 = document.getElementById("NumberOf").value;
+			ans2 = num3 * num4;
+			
+			document.getElementById("result").innerHTML = ans2 - ans1;
+		}
+		
+		function GDP_calculation()
+		{
+			c = parseFloat(document.getElementById("Consuption").value);
+			i = parseFloat(document.getElementById("Investment").value);
+			g = parseFloat(document.getElementById("Spending").value);
+			e = parseFloat(document.getElementById("Exports").value);
+			x = parseFloat(document.getElementById("Imports").value);
+			ans = e - x;
+			document.getElementById("result2").innerHTML = c + i + g + ans;
+		}
+	</script>
+
+</head>
+
+<body>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<div class="center-align">
+			<img src="img/stonks.png" alt="Stock Market" width="700" height="300">
+			</div>
+			<br><br>
+			<h1 class="header center orange-text">Economics</h1>
+			<div class="row center">
+				<h5 class="header col s12 light"> A simple calculator to show how much you have made from shares </h5>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section hide-on-small-only">
+			<form> 
+				Original price : <input type="text" id="Original" /><br>
+				Current price: <input type="text" id="Current" /><br>
+				Number of shares: <input type="text" id="NumberOf" /><br>
+				<input type="button" onClick="share_calculation()" Value="Calculate Profit" />
+			</form>
+			<p>The Result is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+			</p>
+		</div>
+	</div>
+	
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<div class="row center">
+				<h5 class="header col s12 light"> A simple calculator to calculate GDP </h5>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section hide-on-small-only">
+			<form> 
+				Consumption : <input type="text" id="Consuption" /><br>
+				Invsetment : <input type="text" id="Investment" /><br>
+				Goverment spending : <input type="text" id="Spending" /><br>
+				Exports : <input type="text" id="Exports" /><br>
+				Imports : <input type="text" id="Imports" /><br>
+				<input type="button" onClick="GDP_calculation()" Value="Calculate GDP" />
+			</form>
+			<p>The Result is : <br>
+				<span class="blue-text text-darken-2" id = "result2"></span>
+			</p>
+		</div>
+	</div>
+
+</body>
+
+</html>
