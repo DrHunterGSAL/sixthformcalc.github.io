@@ -1,33 +1,41 @@
+<!DOCTYPE html>
 <html>
-
 <head>
+  
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>index.html</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+  
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 
 </head>
 
-<script>
-	var slideIndex = 1;
-	showDivs(slideIndex);
-
-	function plusDivs(n) {
-	showDivs(slideIndex += n);
-	}
-
-	function showDivs(n) {
-	var i;
-	var x = document.getElementsByClassName("mySlides");
-	if (n > x.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = x.length}
-	for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none";  
-	}
-	x[slideIndex-1].style.display = "block";  
-}
-</script>
 
 <body>
 
@@ -51,29 +59,41 @@
 				<h5 class="header col s12 light"> A resource for equations and calculators that are in the A-Level curriculum  </h5>
 
 
+        </div>
+
+   <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Sixth Form Calculator</h1>
+            <div class="row center">
+                <h5 class="header col s12 light"> A resource for equations and calculators that are in the A-Level curriculum  </h5>
+
+
             </div>
         </div>
     </div>
+
 	
-    <div class="container">
-		
-		<a href="physics.html">
-		<img class="mySlides" src="physics.jpg" style="width:100%">
-		</a>
-		<a href="maths.html">
-		<img class="mySlides" src="maths.jpg" style="width:100%">
-		</a>
-		<a href="cs.html">
-		<img class="mySlides" src="computing.jpg" style="width:100%">
-		</a>
-		<a href="econ.html">
-		<img class="mySlides" src="economics.jpg" style="width:100%">
-		</a>
-		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+
+<div class="w3-content w3-display-container">
+	<a href="physics.html">
+	<img class="mySlides" src="physics.jpg" style="width:100%;height:500px">
+	</a>
+	<a href="maths.html">
+	<img class="mySlides" src="maths.jpg" style="width:100%;height:500px">
+	</a>
+	<a href="cs.html">
+	<img class="mySlides" src="computing.jpg" style="width:100%;height:500px">
+	</a>
+	<a href="econ.html">
+	<img class="mySlides" src="economics.jpg" style="width:100%;height:500px">
+	</a>
+
+	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
 
 
 </body>
-
-</html>
-</html>
