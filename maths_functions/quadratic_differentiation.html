@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<script>
+		function diffQuad()
+		{
+			a = document.getElementById("a").value;
+			b = document.getElementById("b").value;
+
+			a = a * 2
+
+			document.getElementById("final_equation").innerHTML = "dy/dx = " + a + "x" + " + " + b;
+		}
+
+		function integQuad()
+		{
+			a = document.getElementById("a").value;
+			b = document.getElementById("b").value;
+			c = document.getElementById("c").value;
+
+			a = a / 3;
+			b = b / 2;
+
+			document.getElementById("final_equation").innerHTML = "∫ = " + a + "x³ + " + b + "x² + " + c + "x + c";
+		}
+	</script>
+
+</head>
+
+<body>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h1 class="header center orange-text">Multiply and Divide</h1>
+			<div class="row center">
+				<h5 class="header col s12 light"> A simple calculator to calculate the area of a circle </h5>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section hide-on-small-only">
+			<form> 
+				y = ax<sup>2</sup> + bx + c<br>
+				a: <input id="a" /><br>
+				b: <input id="b" /><br>
+				c: <input id="c" /><br>
+				<input type="button" onClick="diffQuad()" Value="Differentiate" />
+				<input type="button" onClick="integQuad()" Value="Integrate" />
+			</form>
+
+			<form>
+				<p id="equation form"></p>
+			</form>
+			<p id="Final Statement"><br>
+				<span class="blue-text text-darken-2" id = "final_equation"></span>
+			</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

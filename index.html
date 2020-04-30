@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
-<title>index.html</title>
+<head>
+  
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>index.html</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style>
 .mySlides {display:none;}
 </style>
+  
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+</head>
+
+
 <body>
 
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+				<li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+			</ul>
+
+
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h1 class="header center orange-text">Sixth Form Calculator</h1>
+			<div class="row center">
+				<h5 class="header col s12 light"> A resource for equations and calculators that are in the A-Level curriculum  </h5>
+
 
         </div>
-    </nav>
 
    <div class="section no-pad-bot" id="index-banner">
         <div class="container">
@@ -25,9 +68,13 @@
             <div class="row center">
                 <h5 class="header col s12 light"> A resource for equations and calculators that are in the A-Level curriculum  </h5>
 
+
             </div>
         </div>
     </div>
+
+	
+
 
 <div class="w3-content w3-display-container">
 	<a href="physics.html">
@@ -47,24 +94,6 @@
 	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
 
 </body>
