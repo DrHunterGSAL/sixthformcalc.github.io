@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script>
+
+		function GDP_calculation()
+		{
+			c = parseFloat(document.getElementById("Consuption").value);
+			i = parseFloat(document.getElementById("Investment").value);
+			g = parseFloat(document.getElementById("Spending").value);
+			e = parseFloat(document.getElementById("Exports").value);
+			x = parseFloat(document.getElementById("Imports").value);
+			ans = e - x;
+			document.getElementById("result2").innerHTML = c + i + g + ans;
+		}
+	</script>
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+
+</head>
+
+<body>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/6fc_logo.png" /></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="maths.html">Maths</a></li>
+				<li><a href="cs.html">Comp Sci</a></li>
+				<li><a href="econ.html">Economics</a></li>
+				<li><a href="business.html">Business</a></li>
+				<li><a href="physics.html">Physics</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<div class="row center">
+				<h5 class="header col s12 light"> A simple calculator to calculate GDP </h5>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section hide-on-small-only">
+			<form> 
+				Consumption : <input type="text" id="Consuption" /><br>
+				Invsetment : <input type="text" id="Investment" /><br>
+				Goverment spending : <input type="text" id="Spending" /><br>
+				Exports : <input type="text" id="Exports" /><br>
+				Imports : <input type="text" id="Imports" /><br>
+				<input type="button" onClick="GDP_calculation()" Value="Calculate GDP" />
+			</form>
+			<p>The Result is : <br>
+				<span class="blue-text text-darken-2" id = "result2"></span>
+			</p>
+		</div>
+	</div>
+
+</body>
+
+</html>
