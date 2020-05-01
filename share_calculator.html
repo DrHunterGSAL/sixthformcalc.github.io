@@ -6,6 +6,24 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script>
+
+		function share_calculation() 
+		{ 
+			num1 = document.getElementById("Original").value;
+			num2 = document.getElementById("NumberOf").value;
+			ans1 = num1 * num2;
+			
+			num3 = document.getElementById("Current").value;
+			num4 = document.getElementById("NumberOf").value;
+			ans2 = num3 * num4;
+			
+			document.getElementById("result").innerHTML = ans2 - ans1;
+		}
+	</script>
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 	</script>
 
 </head>
@@ -30,21 +48,23 @@
 			</div>
 			<br><br>
 			<h1 class="header center orange-text">Economics</h1>
+			<div class="row center">
+				<h5 class="header col s12 light"> A simple calculator to show how much you have made from shares </h5>
+
+			</div>
 		</div>
 	</div>
-	
 	<div class="container">
 		<div class="section hide-on-small-only">
-			<a href="share_calculator.html">
-			<div class="card-panel">
-				<span class="blue-text text-darken-2">Share Calculator </span>
-			</a>
-		</div>
-		<div class="section hide-on-small-only">
-			<a href="GDP_calculator.html">
-			<div class="card-panel">
-				<span class="blue-text text-darken-2">GDP Calculator </span>
-			</a>
+			<form> 
+				Original price : <input type="text" id="Original" /><br>
+				Current price: <input type="text" id="Current" /><br>
+				Number of shares: <input type="text" id="NumberOf" /><br>
+				<input type="button" onClick="share_calculation()" Value="Calculate Profit" />
+			</form>
+			<p>The Result is : <br>
+				<span class="blue-text text-darken-2" id = "result"></span>
+			</p>
 		</div>
 	</div>
 
